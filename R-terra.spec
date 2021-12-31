@@ -4,7 +4,7 @@
 #
 Name     : R-terra
 Version  : 1.4.11
-Release  : 13
+Release  : 14
 URL      : https://cran.r-project.org/src/contrib/terra_1.4-11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/terra_1.4-11.tar.gz
 Summary  : Spatial Data Analysis
