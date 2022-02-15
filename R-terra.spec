@@ -4,20 +4,31 @@
 #
 Name     : R-terra
 Version  : 1.4.11
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/terra_1.4-11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/terra_1.4-11.tar.gz
 Summary  : Spatial Data Analysis
 Group    : Development/Tools
 License  : GPL-3.0
+Requires: R-terra-lib = %{version}-%{release}
 Requires: R-Rcpp
 BuildRequires : R-Rcpp
 BuildRequires : buildreq-R
 BuildRequires : gdal-dev
+BuildRequires : geos-dev
+BuildRequires : pkgconfig(sqlite3)
 BuildRequires : proj-dev
 
 %description
 No detailed description available
+
+%package lib
+Summary: lib components for the R-terra package.
+Group: Libraries
+
+%description lib
+lib components for the R-terra package.
+
 
 %prep
 %setup -q -c -n terra
@@ -28,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1636042882
+export SOURCE_DATE_EPOCH=1644955907
 
 %install
-export SOURCE_DATE_EPOCH=1636042882
+export SOURCE_DATE_EPOCH=1644955907
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -72,3 +83,51 @@ R CMD check --no-manual --no-examples --no-codoc terra || :
 
 %files
 %defattr(-,root,root,-)
+/usr/lib64/R/library/terra/DESCRIPTION
+/usr/lib64/R/library/terra/INDEX
+/usr/lib64/R/library/terra/Meta/Rd.rds
+/usr/lib64/R/library/terra/Meta/features.rds
+/usr/lib64/R/library/terra/Meta/hsearch.rds
+/usr/lib64/R/library/terra/Meta/links.rds
+/usr/lib64/R/library/terra/Meta/nsInfo.rds
+/usr/lib64/R/library/terra/Meta/package.rds
+/usr/lib64/R/library/terra/NAMESPACE
+/usr/lib64/R/library/terra/NEWS.md
+/usr/lib64/R/library/terra/R/terra
+/usr/lib64/R/library/terra/R/terra.rdb
+/usr/lib64/R/library/terra/R/terra.rdx
+/usr/lib64/R/library/terra/ex/countries.rds
+/usr/lib64/R/library/terra/ex/elev.tif
+/usr/lib64/R/library/terra/ex/logo.tif
+/usr/lib64/R/library/terra/ex/lux.dbf
+/usr/lib64/R/library/terra/ex/lux.prj
+/usr/lib64/R/library/terra/ex/lux.shp
+/usr/lib64/R/library/terra/ex/lux.shx
+/usr/lib64/R/library/terra/ex/meuse.rds
+/usr/lib64/R/library/terra/ex/meuse.tif
+/usr/lib64/R/library/terra/help/AnIndex
+/usr/lib64/R/library/terra/help/aliases.rds
+/usr/lib64/R/library/terra/help/figures/logo.png
+/usr/lib64/R/library/terra/help/paths.rds
+/usr/lib64/R/library/terra/help/terra.rdb
+/usr/lib64/R/library/terra/help/terra.rdx
+/usr/lib64/R/library/terra/html/00Index.html
+/usr/lib64/R/library/terra/html/R.css
+/usr/lib64/R/library/terra/tests/tinytest.R
+/usr/lib64/R/library/terra/tinytest/test_aggregate.R
+/usr/lib64/R/library/terra/tinytest/test_classify.R
+/usr/lib64/R/library/terra/tinytest/test_extract.R
+/usr/lib64/R/library/terra/tinytest/test_focal.R
+/usr/lib64/R/library/terra/tinytest/test_geom.R
+/usr/lib64/R/library/terra/tinytest/test_global.R
+/usr/lib64/R/library/terra/tinytest/test_matrix-input.R
+/usr/lib64/R/library/terra/tinytest/test_raster-vector.R
+/usr/lib64/R/library/terra/tinytest/test_vector-subset.R
+/usr/lib64/R/library/terra/tinytest/test_window.R
+/usr/lib64/R/library/terra/tinytest/tinytest.R
+
+%files lib
+%defattr(-,root,root,-)
+/usr/lib64/R/library/terra/libs/terra.so
+/usr/lib64/R/library/terra/libs/terra.so.avx2
+/usr/lib64/R/library/terra/libs/terra.so.avx512
