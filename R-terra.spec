@@ -4,7 +4,7 @@
 #
 Name     : R-terra
 Version  : 1.7.18
-Release  : 31
+Release  : 32
 URL      : https://cran.r-project.org/src/contrib/terra_1.7-18.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/terra_1.7-18.tar.gz
 Summary  : Spatial Data Analysis
@@ -18,9 +18,6 @@ BuildRequires : gdal-dev
 BuildRequires : geos-dev
 BuildRequires : pkgconfig(sqlite3)
 BuildRequires : proj-dev
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 No detailed description available
@@ -42,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1678124672
+export SOURCE_DATE_EPOCH=1678830406
 
 %install
-export SOURCE_DATE_EPOCH=1678124672
+export SOURCE_DATE_EPOCH=1678830406
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
