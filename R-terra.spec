@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-terra
-Version  : 1.7.23
-Release  : 34
-URL      : https://cran.r-project.org/src/contrib/terra_1.7-23.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/terra_1.7-23.tar.gz
+Version  : 1.7.28
+Release  : 35
+URL      : https://cran.r-project.org/src/contrib/terra_1.7-28.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/terra_1.7-28.tar.gz
 Summary  : Spatial Data Analysis
 Group    : Development/Tools
 License  : GPL-3.0
@@ -39,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1681063301
+export SOURCE_DATE_EPOCH=1682094679
 
 %install
-export SOURCE_DATE_EPOCH=1681063301
+export SOURCE_DATE_EPOCH=1682094679
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -123,6 +123,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/terra/tinytest/test_cats.R
 /usr/lib64/R/library/terra/tinytest/test_classify.R
 /usr/lib64/R/library/terra/tinytest/test_crds.R
+/usr/lib64/R/library/terra/tinytest/test_crop.R
 /usr/lib64/R/library/terra/tinytest/test_extent.R
 /usr/lib64/R/library/terra/tinytest/test_extract.R
 /usr/lib64/R/library/terra/tinytest/test_focal.R
