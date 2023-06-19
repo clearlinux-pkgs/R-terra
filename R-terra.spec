@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-terra
-Version  : 1.7.29
-Release  : 44
-URL      : https://cran.r-project.org/src/contrib/terra_1.7-29.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/terra_1.7-29.tar.gz
+Version  : 1.7.37
+Release  : 45
+URL      : https://cran.r-project.org/src/contrib/terra_1.7-37.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/terra_1.7-37.tar.gz
 Summary  : Spatial Data Analysis
 Group    : Development/Tools
 License  : GPL-3.0
@@ -42,10 +42,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1686952464
+export SOURCE_DATE_EPOCH=1687192309
 
 %install
-export SOURCE_DATE_EPOCH=1686952464
+export SOURCE_DATE_EPOCH=1687192309
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -142,6 +142,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/terra/tinytest/test_weighted-mean.R
 /usr/lib64/R/library/terra/tinytest/test_window.R
 /usr/lib64/R/library/terra/tinytest/test_wkt_grd.R
+/usr/lib64/R/library/terra/tinytest/test_zonal.R
 /usr/lib64/R/library/terra/tinytest/tinytest.R
 
 %files lib
