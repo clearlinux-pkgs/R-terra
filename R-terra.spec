@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-terra
-Version  : 1.7.37
-Release  : 46
-URL      : https://cran.r-project.org/src/contrib/terra_1.7-37.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/terra_1.7-37.tar.gz
+Version  : 1.7.39
+Release  : 47
+URL      : https://cran.r-project.org/src/contrib/terra_1.7-39.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/terra_1.7-39.tar.gz
 Summary  : Spatial Data Analysis
 Group    : Development/Tools
 License  : GPL-3.0
@@ -42,10 +42,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1687192309
+export SOURCE_DATE_EPOCH=1687538358
 
 %install
-export SOURCE_DATE_EPOCH=1687192309
+export SOURCE_DATE_EPOCH=1687538358
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
