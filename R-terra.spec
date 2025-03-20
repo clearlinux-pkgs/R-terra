@@ -7,7 +7,7 @@
 #
 Name     : R-terra
 Version  : 1.8.29
-Release  : 105
+Release  : 106
 URL      : https://ftp.osuosl.org/pub/cran/src/contrib/terra_1.8-29.tar.gz
 Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/terra_1.8-29.tar.gz
 Summary  : Spatial Data Analysis
